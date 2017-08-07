@@ -86,7 +86,7 @@ end
 # Test 16
 
 def sell_pet_to_customer(pet_shop, pet, customer)
-  if pet == nil || customer[:cash] <= pet[:price] then puts "Sorry"
+  if pet == nil || customer[:cash] < pet[:price] then puts "Sorry"
   elsif
       customer[:pets].push(pet)
       pet_shop[:admin][:pets_sold] += 1
